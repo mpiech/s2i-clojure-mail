@@ -11,6 +11,8 @@ LABEL io.k8s.description="Platform for building Clojure appsthat send mail" \
 
 RUN yum -y install java-1.8.0-openjdk-devel && yum clean all
 
+RUN yum -y install epel-release --enablerepo=extras
+
 RUN yum -y install ssmtp && yum clean all
 
 RUN curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ${HOME}/lein
