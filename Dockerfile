@@ -15,6 +15,7 @@ RUN yum -y install epel-release --enablerepo=extras
 
 RUN yum -y install ssmtp && yum clean all
 
+RUN chmod a+wx /etc/ssmtp
 RUN chmod a+w /etc/ssmtp/ssmtp.conf
 
 RUN curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ${HOME}/lein
