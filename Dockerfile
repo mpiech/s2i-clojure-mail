@@ -11,12 +11,15 @@ LABEL io.k8s.description="Platform for building Clojure appsthat send mail" \
 
 RUN yum -y install java-1.8.0-openjdk-devel && yum clean all
 
-RUN yum -y install epel-release --enablerepo=extras
+RUN yum -y install epel-release --enablerepo=extras && yum clean all
 
 RUN yum -y install ssmtp && yum clean all
 
+RUN yum -y install nss_wrapper gettext && yum clean all
+
 RUN chmod a+wx /etc/ssmtp
 RUN chmod a+w /etc/ssmtp/ssmtp.conf
+RUN chmod g-s /usr/sbin/ssmtp
 
 RUN curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ${HOME}/lein
 RUN chmod 775 ${HOME}/lein
