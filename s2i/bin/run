@@ -1,4 +1,4 @@
-#!/bin/bash -e
+b#!/bin/bash -e
 #
 # S2I run script for the 's2i-clojure-mail' image.
 # The run script executes the server that runs your application.
