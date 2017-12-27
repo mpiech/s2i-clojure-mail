@@ -31,7 +31,7 @@ popd > /dev/null
 
 if [ -f ${HOME}/src/resources/ssmtp.conf ]; then
    echo "---> Moving /etc/ssmtp/ssmtp.conf..."
-   mv ${HOME}/src/resources/ssmtp.conf /etc/ssmtp
+   mv ${HOME}/src/resources/ssmtp.conf /etc/ssmtp/ssmtp.tmp
    echo "---> Fixing hostname in /etc/ssmtp/ssmtp.conf..."
-   sed 's/XXXX/`hostname`/g' /etc/ssmtp/ssmtp.conf
+   sed "s/XXXX/`hostname`/g" /etc/ssmtp/ssmtp.tmp > /etc/ssmtp/ssmtp.conf
 fi
