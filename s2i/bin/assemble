@@ -29,6 +29,6 @@ mv "$(${HOME}/lein uberjar | sed -n 's/^Created \(.*standalone\.jar\)/\1/p')" ${
 popd > /dev/null
 
 if [ -f ${HOME}/src/resources/ssmtp.conf ]; then
-   echo "---> Moving /etc/ssmtp/ssmtp.conf..."
-   mv ${HOME}/src/resources/ssmtp.conf /etc/ssmtp/ssmtp.conf
+   echo "---> Copying to /etc/ssmtp/ssmtp.conf..."
+   cp ${HOME}/src/resources/ssmtp.conf /etc/ssmtp/ssmtp.conf
 fi

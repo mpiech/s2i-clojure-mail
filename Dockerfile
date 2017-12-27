@@ -17,8 +17,8 @@ RUN yum -y install ssmtp && yum clean all
 
 RUN yum -y install nss_wrapper gettext && yum clean all
 
-RUN chmod a+wx /etc/ssmtp
-RUN chmod a+w /etc/ssmtp/ssmtp.conf
+RUN chmod a+rwx /etc/ssmtp
+RUN chmod a+rw /etc/ssmtp/ssmtp.conf
 RUN chmod g-s /usr/sbin/ssmtp
 
 RUN curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein -o ${HOME}/lein
