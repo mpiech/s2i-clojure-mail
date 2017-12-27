@@ -30,5 +30,5 @@ popd > /dev/null
 
 if [ -f ${HOME}/src/resources/ssmtp.conf ]; then
    echo "---> Moving /etc/ssmtp/ssmtp.conf..."
-   mv ${HOME}/src/resources/ssmtp.conf /etc/ssmtp/ssmtp.tmp
+   mv ${HOME}/src/resources/ssmtp.conf /etc/ssmtp/ssmtp.conf
 fi
