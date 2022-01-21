@@ -1,5 +1,5 @@
 
-IMAGE_NAME = s2i-clojure-mail
+IMAGE_NAME = mpiech/s2i-clojure-mail
 
 .PHONY: build
 build:
