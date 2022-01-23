@@ -8,3 +8,8 @@
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
 # tar cf - <list of files and folders>
+if [ -d ${HOME}/.m2 ]; then
+    pushd ${HOME} > /dev/null
+    tar cf - .m2
+    popd > /dev/null
+fi
