@@ -35,8 +35,4 @@ popd > /dev/null
 if [ -f ${HOME}/src/resources/ssmtp.conf.template ]; then
    echo "---> Copying resources/ssmtp.conf.template to /etc/ssmtp/ssmtp.conf with env vars substituted..."
    envsubst < ${HOME}/src/resources/ssmtp.conf.template > /etc/ssmtp/ssmtp.conf
-#   chmod a+rw /etc/ssmtp/ssmtp.conf
-#   chown root:mail /etc/ssmtp/ssmtp.conf
-#   ls -l /etc/ssmtp/ssmtp.conf
-#   cat /etc/ssmtp/ssmtp.conf
 fi
